@@ -52,8 +52,8 @@
                                         <td> <?= $s->alamat ?> </td>
                                         <td> <?= $s->keterangan ?> </td>
                                         <td>
-                                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editsupplier"><i class="fas fa-edit"></i></button>
-                                            <a href=" <?= base_url('supplier/hapus/' . $s->id_supplier); ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
+                                            <a href="<?= site_url('supplier/updatesupplier/' . $s->id_supplier); ?>" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editsupplier"><i class="fas fa-edit"></i></a>
+                                            <a onclick="return confirm('Apakah Anda Yakin?')" href=" <?= base_url('supplier/hapus/' . $s->id_supplier); ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                 <?php

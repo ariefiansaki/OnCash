@@ -16,10 +16,6 @@
                 <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
             </div>
 
-            <div class="alert alert-success" role="alert">
-                Selamat Datang <b><?= $this->session->userdata('nama'); ?></b> Sebagai <b><?= ucwords($this->session->userdata('role')); ?></b>
-            </div>
-
             <!-- Content Row -->
             <div class="row">
 

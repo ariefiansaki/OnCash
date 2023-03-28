@@ -33,6 +33,7 @@
                             <thead>
                                 <tr>
                                     <th>ID BARANG</th>
+                                    <th>BARCODE</th>
                                     <th>NAMA BARANG</th>
                                     <th>KATEGORI BARANG</th>
                                     <th>HARGA BARANNG</th>
@@ -47,12 +48,13 @@
                                 ?>
                                     <tr>
                                         <td> <?= $b->id_barang ?> </td>
+                                        <td> <?= $b->barcode ?> </td>
                                         <td> <?= $b->nama_barang ?> </td>
                                         <td> <?= $b->kategori_barang ?> </td>
                                         <td> <?= $b->harga_barang ?> </td>
                                         <td> <?= $b->stok_barang ?> </td>
                                         <td>
-                                            <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editbarang"><i class="fas fa-edit"></i></button>
+                                            <a href="<?= site_url('barang/updatebarang/' . $b->id_barang); ?>" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editbarang"><i class="fas fa-edit"></i></a>
                                             <a href=" <?= base_url('barang/hapus/' . $b->id_barang); ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
@@ -80,6 +82,10 @@
                     <!-- <form action="" method="POST"> -->
                     <div class="mb-3">
                         <input type="hidden" name="idbarang" value="<?= $b->id_barang ?>">
+                        <label for="exampleInputtext1">Barcode</label>
+                        <input type="text" class="form-control" name="barcode" id="barcode" value="<?php echo $b->barcode; ?>" required>
+                    </div>
+                    <div class="mb-3">
                         <label for="exampleInputtext1">Nama Barang</label>
                         <input type="text" class="form-control" name="namabarang" id="namabarang" value="<?php echo $b->nama_barang; ?>" required>
                     </div>
@@ -117,6 +123,10 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
+                        <div class="mb-3">
+                            <label for="exampleInputtext1">Barcode</label>
+                            <input type="text" class="form-control" name="barcode" id="barcode" required>
+                        </div>
                         <div class="mb-3">
                             <label for="exampleInputtext1">Nama Barang</label>
                             <input type="text" class="form-control" name="namabarang" id="namabarang" required>

@@ -55,11 +55,8 @@ class Auth extends CI_Controller
 				window.location='" . site_url('dashboard') . "'
 				</script>";
                 } else {
-                    $this->session->set_userdata($params);
-                    echo "<script>
-				alert('Selamat Login Berhasil KASIR');
-				window.location='" . site_url('auth/login') . "'
-				</script>";
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Gagal Login.</div>');
+                    redirect('auth');
                 }
             } else {
                 echo "<script>

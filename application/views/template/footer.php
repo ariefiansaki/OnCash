@@ -1,5 +1,5 @@
  <!-- Footer -->
- <footer class="sticky-footer bg-white">
+ <footer class="sticky-footer" style="position: fixed; bottom: 0; width: 100%;">
      <div class="container my-auto">
          <div class="copyright text-center my-auto">
              <span>Copyright &copy; OnCash 2022
@@ -56,6 +56,7 @@
  <!-- Page level custom scripts -->
  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
  <!-- <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script> -->
+ <script src="<?= base_url(); ?>assets/assets2/js/jquery-1.11.2.min.js"></script>
  <script src="<?= base_url(); ?>assets/assets2/js/demo/chart-area-demo.js"></script>
  <script src="<?= base_url(); ?>assets/assets2/js/demo/chart-pie-demo.js"></script>
 

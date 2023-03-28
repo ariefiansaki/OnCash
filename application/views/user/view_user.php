@@ -52,7 +52,7 @@
                                         <td> <?= $u->email ?> </td>
                                         <td> <?= $u->level ?> </td>
                                         <td>
-                                            <a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edituser" . <?= $u->id_user ?>><i class="fas fa-edit"></i></a>
+                                            <a class="btn btn-sm btn-primary" data-toggle="modal" data-target="#edituser"><i class="fas fa-edit"></i></a>
                                             <a href=" <?= base_url('user/hapus/' . $u->id_user); ?>" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
@@ -71,7 +71,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="edituserLabel">Modal title</h5>
+                    <h5 class="modal-title" id="edituserLabel">Edit User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

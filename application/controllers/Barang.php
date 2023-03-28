@@ -29,6 +29,7 @@ class Barang extends CI_Controller
     {
         $barang = $this->Model_barang;
         $idbarang = $this->input->post('idbarang');
+        $barcode = $this->input->post('barcode');
         $namabarang = $this->input->post('namabarang');
         $kategoribarang = $this->input->post('kategoribarang');
         $hargabarang = $this->input->post('hargabarang');
@@ -37,6 +38,7 @@ class Barang extends CI_Controller
 
         $data = array(
             'id_barang' => $idbarang,
+            'barcode' => $barcode,
             'nama_barang' => $namabarang,
             'kategori_barang' => $kategoribarang,
             'harga_barang' => $hargabarang,
@@ -74,6 +76,7 @@ class Barang extends CI_Controller
     function updatebarang()
     {
         $idbarang = $this->input->post('idbarang');
+        $barcode = $this->input->post('barcode');
         $namabarang = $this->input->post('namabarang');
         $kategoribarang = $this->input->post('kategoribarang');
         $hargabarang = $this->input->post('hargabarang');
@@ -81,6 +84,7 @@ class Barang extends CI_Controller
 
         $data = array(
             'nama_barang' => $namabarang,
+            'barcode' => $barcode,
             'kategori_barang' => $kategoribarang,
             'harga_barang' => $hargabarang,
             'stok_barang' => $stokbarang

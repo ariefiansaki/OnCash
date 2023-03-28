@@ -65,4 +65,15 @@ class Model_barang extends CI_Model
             return 0;
         }
     }
+
+    function check_barcode($code, $id = null)
+    {
+        $this->db->from('barang');
+        $this->db->where('barcode', $code);
+        if ($id != null) {
+            $this->db->where('item_id !=', $id);
+        }
+        $query = $this->db->get();
+        return $query;
+    }
 }

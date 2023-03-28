@@ -54,4 +54,35 @@ class Pelanggan extends CI_Controller
             redirect('pelanggan');
         }
     }
+
+    function edit()
+    {
+        $model = new Model_pelanggan();
+        $data['pelanggan'] = $model->where('id_pelanggan', $idpelanggan)->first();
+        redirect('pelanggan');
+    }
+
+    function updatepelanggan()
+    {
+        $idpelanggan = $this->input->post('idpelanggan');
+        $namapelanggan = $this->input->post('namaplg');
+        $alamatpelanggan = $this->input->post('alamatplg');
+        $teleponpelanggan = $this->input->post('teleponplg');
+
+        $data = array(
+            'id_pelanggan' => $idpelanggan,
+            'nama_pelanggan' => $namapelanggan,
+            'alamat_pelanggan' => $alamatpelanggan,
+            'telepon_pelanggan' => $teleponpelanggan
+        );
+
+        $simpan = $this->Model_pelanggan->editpelanggan($data, $idpelanggan);
+        if ($simpan == 1) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Berhasil Mengedit.</div>');
+            redirect('pelanggan');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Berhasil Menghapus.</div>');
+            redirect('pelanggan');
+        }
+    }
 }
