@@ -43,7 +43,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" href="<?= base_url('barang') ?>">Data Barang</a>
-                        <a class="collapse-item" href="<?= base_url('pelanggan') ?>">Data Pelanggan</a>
+                        <!-- <a class="collapse-item" href="<?= base_url('pelanggan') ?>">Data Pelanggan</a> -->
                         <a class="collapse-item" href="<?= base_url('supplier') ?>">Data Supplier</a>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
             <!-- Divider -->
 
             <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Data Laporan</span>
@@ -77,7 +77,7 @@
                         <a class="collapse-item" href="login.html">Laporan</a>
                     </div>
                 </div>
-            </li>
+            </li> -->
 
             <hr class="sidebar-divider d-none d-md-block">
 

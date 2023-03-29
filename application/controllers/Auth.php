@@ -51,12 +51,19 @@ class Auth extends CI_Controller
                 if ($params['level'] == 1) {
                     $this->session->set_userdata($params);
                     echo "<script>
-				alert('Selamat Login Berhasil ADMIN');
-				window.location='" . site_url('dashboard') . "'
-				</script>";
-                } else {
-                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Gagal Login.</div>');
-                    redirect('auth');
+                    alert('Selamat Login Berhasil ADMIN');
+                    window.location='" . site_url('dashboard') . "'
+                    </script>";
+                } else if ($params['level'] == 2) {
+                    // $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda Gagal Login.</div>');
+                    // redirect('auth');
+                    $this->session->set_userdata($params);
+                    var_dump($params['level'] == 2);
+                    die;
+                    echo "<script>
+                    alert('Selamat Login Berhasil KASIR');
+                    window.location='" . site_url('transaksi') . "'
+                    </script>";
                 }
             } else {
                 echo "<script>
